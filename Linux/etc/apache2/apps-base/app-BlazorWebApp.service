@@ -1,0 +1,8 @@
+[Unit]
+Description=Simple Blazor Server-Side App
+
+[Service]
+ExecStart=/etc/apache2/apps-base/start-server BlazorWebApp BlazorWebApp.dll 5000
+
+[Install]
+WantedBy=multi-user.target

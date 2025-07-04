@@ -1,0 +1,11 @@
+#!/bin/sh
+# 
+# Start Blazor server component
+# 
+# Parameters:
+# - deployment directory, relative to /var/html/apps
+# - component file name (usually the DLL file)
+# - port number
+
+cd /var/www/html/apps/$1
+dotnet $2 --urls http://localhost:$3 >> `date +%Y%m%d`-start.log
